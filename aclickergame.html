@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Clicker Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    #score {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+    button {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Clicker Game</h1>
+  <div id="score">Score: 0</div>
+  <button onclick="increaseScore()">Click Me!</button>
+  <button onclick="resetScore()">Reset</button>
+
+  <script>
+    let score = 0;
+
+    function increaseScore() {
+      score++;
+      document.getElementById('score').textContent = "Score: " + score;
+    }
+
+    function resetScore() {
+      score = 0;
+      document.getElementById('score').textContent = "Score: " + score;
+    }
+  </script>
+
+</body>
+</html>
